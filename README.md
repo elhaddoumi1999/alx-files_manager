@@ -29,4 +29,4 @@ A simple and efficient file manager built with **Node.js**, designed to handle f
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/elhaddoumi1999/alx-files_manager.git
-   cd your-repo-name
+   cd alx-files_manager
