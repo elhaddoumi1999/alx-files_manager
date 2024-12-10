@@ -1,32 +1,48 @@
-# File Manager with Authentication, Pagination, and Background Processing
+# File Upload Platform - Backend
 
-A simple and efficient file manager built with **Node.js**, designed to handle file uploads, secure user authentication, and task processing seamlessly.
+This is a simple backend platform for **file uploading and management** built with **Node.js**, **MongoDB**, **Redis**, and **JWT** authentication. The platform allows users to upload files, manage permissions, view files, and generate image thumbnails. Additionally, it supports background processing with **Bull** for handling tasks like generating thumbnails.
 
 ---
 
 ## Features
-- **Authentication**: Secure login and role-based access control using JWT.
-- **File Management**: Upload, view, delete files with metadata stored in MongoDB.
-- **Pagination**: Efficiently browse files with sorting and filtering.
-- **Redis Integration**: Used for session management and caching frequently accessed data.
-- **Background Processing**: Manage tasks like file compression or cleanup using worker threads or libraries like Bull.
+- **User Authentication** using JWT (JSON Web Tokens)
+- **File Uploading**: Users can upload files.
+- **File Permission Management**: Change the permission of files (public/private).
+- **File Viewing**: Users can view their uploaded files.
+- **Thumbnail Generation**: Automatically generate thumbnails for image files.
+- **Pagination**: List files with pagination support.
+- **Background Processing**: Image thumbnail generation is handled in the background using **Bull**.
 
 ---
 
 ## Tech Stack
-- ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white&style=for-the-badge) **Node.js**: Backend framework for handling requests and routing.
-- ![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white&style=for-the-badge) **Express.js**: Lightweight server for RESTful APIs.
-- ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white&style=for-the-badge) **MongoDB**: Database for storing file metadata and user information.
-- ![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white&style=for-the-badge) **Redis**: In-memory data store for caching and sessions.
-- ![JWT](https://img.shields.io/badge/JWT-000000?logo=jsonwebtokens&logoColor=white&style=for-the-badge) **JWT**: Secure authentication with JSON Web Tokens.
-- ![Multer](https://img.shields.io/badge/Multer-FF5733?style=for-the-badge) **Multer**: Middleware for handling file uploads.
-- ![Bull](https://img.shields.io/badge/Bull-EF4444?logo=redis&logoColor=white&style=for-the-badge) **Bull**: For managing background jobs.
+
+![Node.js](https://img.icons8.com/color/48/000000/nodejs.png) **Node.js**: JavaScript runtime for building the backend API.  
+![Express](https://img.icons8.com/color/48/000000/express.png) **Express.js**: Web framework for Node.js to handle routing and middleware.  
+![MongoDB](https://img.icons8.com/ios-filled/50/000000/mongodb.png) **MongoDB**: NoSQL database for storing user and file data.  
+![Redis](https://img.icons8.com/ios-filled/50/000000/redis.png) **Redis**: Temporary data storage (e.g., caching or session management).  
+![JWT](https://img.icons8.com/ios-filled/50/000000/json-web-token.png) **JWT (JSON Web Tokens)**: Authentication mechanism for securely identifying users.  
+![Multer](https://img.icons8.com/ios-filled/50/000000/multiple-files.png) **Multer**: Middleware for handling file uploads.  
+![Sharp](https://img.icons8.com/ios-filled/50/000000/image.png) **Sharp**: Library for image processing, used to generate image thumbnails.  
+![Bull](https://img.icons8.com/ios-filled/50/000000/queue.png) **Bull**: A robust queue system for background job processing.  
+![Mocha](https://img.icons8.com/ios-filled/50/000000/test-tube.png) **Mocha**: Testing framework for writing and running tests.
 
 ---
 
-## Installation and Setup
+## Requirements
 
-1. **Clone the repository**:
+Before running this project, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/try/download/community) (or use a cloud service like [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+- [Redis](https://redis.io/download)
+- [Postman](https://www.postman.com/) or any API client to test API requests.
+
+---
+
+## Setup Instructions
+
+1. **Clone the Repository**
    ```bash
    git clone https://github.com/elhaddoumi1999/alx-files_manager.git
    cd alx-files_manager
